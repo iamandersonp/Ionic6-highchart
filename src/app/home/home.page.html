@@ -11,11 +11,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <div class="container">
     <highcharts-chart
       [Highcharts]="highcharts"
       [options]="chartOptions"
       class="chart"
+      [callbackFunction]="chartCallback"
       (chartInstance)="setChart($event)"
       (resized)="chart?.reflow()"
     >
