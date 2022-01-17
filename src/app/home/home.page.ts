@@ -54,5 +54,11 @@ export class HomePage implements OnInit, AfterViewInit {
     this.chart = chart;
   }
 
+  chartCallback(chart): void {
+    setTimeout(() => {
+      chart.reflow();
+    }, 0);
+  }
+
   ngOnInit() {}
 }
